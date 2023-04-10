@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web store DNK.kz</title>
+  <style>
+    body{
+      display: grid;
+      background-color:#e3e3e3;
+    }
+    .header{
+      background-color: white;
+      padding-left: 3%;
+      border: solid 1px #e3e3e3;
+      border-radius:5px;
+    }
+    .block1{
+      margin-top: 10%;
+      margin-left: 40%;
+      width: 20%;
+      height: 70%;
+      border: solid 1px #e3e3e3;
+      border-radius:10px;
+      /*padding-left:20% ;*/
+      text-align: center;
+      background-color: white;
+
+    }
+  </style>
+  <!--    <link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+<div class="header">
+  <a href="http://localhost:8181">
+    <h1>DNK.kz</h1>
+  </a>
+
+
+</div>
+<div class="block1">
+  <h1>Sign in</h1>
+  <form method="post" action="/login">
+    <input type="text" id="email" name="email" placeholder="enter Email" required><br><br>
+    <input type="password" id="password" name="password" placeholder="enter the password" required><br><br>
+    <input type="submit" value="Login">
+  </form>
+  <p></p>
+</div>
+
+
+</body>
+</html>

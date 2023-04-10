@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web store DNK.kz</title>
+    <style>
+        body{
+            display: grid;
+            background-color:#e3e3e3;
+        }
+        .header{
+            background-color: white;
+            padding-left: 3%;
+            border: solid 1px #e3e3e3;
+            border-radius:5px;
+        }
+        .block1{
+            margin-top: 1%;
+            margin-left: 3%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr) ;
+            /*width: 20%;*/
+            /*height: 70%;*/
+            /*border: solid 1px #e3e3e3;*/
+            /*border-radius:10px;*/
+            /*!*padding-left:20% ;*!*/
+            /*text-align: center;*/
+            /*background-color: white;*/
+
+        }
+        .products{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-left: 15%;
+            margin-top: 5%;
+            margin-right: 15%;
+            column-gap: 20%;
+        }
+    </style>
+    <!--    <link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+<div class="header">
+    <a href="http://localhost:8181">
+
+        <h1>DNK.kz</h1>
+
+    </a>
+</div>
+<div class="blocks">
+    <div class="block1">
+        <div class="authorization">
+            <form action="/login">
+                <button>
+                    Sign in
+                </button>
+            </form>
+            <form action="/signUp">
+                <button>
+                    Sign Up
+                </button>
+            </form>
+        </div>
+
+        <div class="search">
+            <form method="post" action="/search">
+                <input type="text" id="search" name="search" placeholder="enter Email" required><br><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <div class="Sort">
+            <form method="post" action="/sortByPrice">
+                <button>
+                    Sort by Price
+                </button>
+            </form>
+
+            <form method="post" action="/sortByRating">
+                <button >
+                    Sort by Rating
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="products">
+        {{range .}}
+        <div class = "product">
+            <h2>{{.Name}} </h2>
+            <p>{{.Price}} tg</p>
+
+        </div>
+        {{end}}
+    </div>
+</div>
+
+
+</body>
+</html>
